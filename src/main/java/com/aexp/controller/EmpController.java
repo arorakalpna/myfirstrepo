@@ -37,5 +37,12 @@ public class EmpController {
     }
 
 
+    @GetMapping("/first")
+    public List<Employee> findoneEmployees() {
+        // Implement
+        List<Employee> emp = new ArrayList<>();
+        employeeRepo.findAll().forEach(emp::add);
+        return emp;
+    }
     }
 
